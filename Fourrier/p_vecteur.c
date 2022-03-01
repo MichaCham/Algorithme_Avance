@@ -83,7 +83,7 @@ t_vecteur mes_vecteurs_de_fourier[TAILLE_SIGNAL];
 int mon_nb_vecteurs_de_fourier;
 
 void doubler_vecteur_fourrier(int nb_vecteur){
-    
+    a;
 }
 
 
