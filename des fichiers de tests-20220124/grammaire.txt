@@ -1,0 +1,41 @@
+<salve> ::= { <calcul> }
+<calcul> ::= <expression> '='
+<expression> ::= <terme> { <op_add> <terme> }
+<terme> ::= <facteur> { <op_mult> <facteur> }
+<facteur> ::= <nombre>
+<op_mult> ::= '*' | '/' | '%' 
+<op_add> ::= '+' | '-'
+<nombre> ::= [ '-' ] ( <nombre_non_signe>  | '(' <expression> ')' )
+<nombre_non_signe> ::= '0' | <chiffre_non_nul> <sequence_chiffres>
+<sequence_chiffres> ::= { '0' | <chiffre_non_nul> }
+<chiffre_non_nul> ::= '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'
+
+terminaux ou litéraux sont écrit entre apostrophes 
+    ex : '1', '*' sont des litéraux
+    sont des entités qui n'ont pas besoin d'être expliquées.
+
+non-terminaux (ou variables) sont écrits entre < et >
+    ex : <chiffre_non_nul>, <nombre> sont des non-terminaux
+    sont des entités qui doivent être expliquées.
+
+le symbole ::= permet d'expliquer un non-terminal
+    <op_add> ::= '+' | '-'
+
+le symbole | permet de décrire des alternatives
+
+les accollades { et } permet d'indiquer une répétition entre 0 et un nombre arbitraire de fois ce qui est écrit entre les accollades.
+
+ex : 
+    <sequence_chiffres> ::= { '0' | <chiffre_non_nul> }
+    signifie une séquence de chiffre est la répétition d'un nombre arbitraire de '0' ou de chiffres non nuls.
+
+les crochets [ et ] permet d'indiquer la posibilité d'apparition de ce qui est écrit entre ces crochets (un option).
+
+ex : 
+    <nombre> ::= [ - ] <nombre_non_ssigne>
+
+    un nombre est
+        # soit le signe moins suivi d'un nombre non signé
+        # soit un nombre non signé
+
+les symboles ( et ) permettent de grouper des expressions

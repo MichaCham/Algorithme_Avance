@@ -1,0 +1,19 @@
+{
+    "terminal.integrated.shell.windows": "C:\\msys64\\usr\\bin\\bash.exe",
+    "terminal.integrated.shellArgs.windows": ["--login","-i"],
+    "terminal.integrated.env.windows": {
+        "CHERE_INVOKING": "1"
+    },
+    "C_Cpp.errorSquiggles": "Disabled",
+    "files.associations": {
+        "string.h": "c",
+        "p_utilitaires.h": "c",
+        "p_chaine.h": "c",
+        "p_arbre_binaire_ordonne.h": "c",
+        "stdio.h": "c",
+        "p_texte_enrichi.h": "c",
+        "p_nanodom.h": "c",
+        "p_texte_elabore.h": "c"
+    },
+    "C_Cpp.dimInactiveRegions": false
+}
